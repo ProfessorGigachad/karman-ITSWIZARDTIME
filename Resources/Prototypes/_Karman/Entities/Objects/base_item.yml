@@ -346,3 +346,122 @@
       damage:
         types:
           Heat: 8
+
+#shields
+- type: entity
+  parent: BaseItemThrowableWeapon
+  id: BaseItemBashableShield #Shield bashing!
+  components:
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 6
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 6
+    attackRate: 0.6 #Very slow
+    angle: 0
+    soundHit:
+      collection: Punch
+    wideAnimationRotation: -135
+  - type: StaminaDamageOnCollide
+    damage: 10
+  - type: StaminaDamageOnHit
+    damage: 10
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/shields.rsi
+    state: riot-icon
+  - type: Item
+    sprite: Objects/Weapons/Melee/shields.rsi
+    heldPrefix: riot
+  - type: Blocking
+    passiveBlockModifier:
+      flatReductions:
+        Blunt: 6
+        Slash: 6
+        Piercing: 6
+        Heat: 6
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Shield
+  - type: ExaminableDamage
+    messages: ShieldMessages
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  abstract: true
+  parent: BaseItemBashableShield
+  id: BashableGinormousShield
+  components:
+  - type: Item
+    size: Ginormous
+    shape:
+    - 0,0,3,5
+  - type: HeldSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+
+- type: entity
+  abstract: true
+  parent: BaseItemBashableShield
+  id: BashableLargeShield
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,2,3
+
+- type: entity
+  abstract: true
+  parent: BaseItemBashableShield
+  id: BashableRoundShield
+  components:
+  - type: Item
+    shape:
+    - 0,0,2,2
+
+- type: entity
+  abstract: true
+  parent: BaseItemBashableShield
+  id: BashableEnergyShield
+  components:
+  - type: Item
+    shape:
+    - 0,0,2,2
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Heat: 6
+  - type: MeleeWeapon
+    damage:
+      types:
+        Heat: 6
+    attackRate: 0.6 #Very slow
+    angle: 0
+    soundHit:
+      collection: Punch
+    wideAnimationRotation: -135
+
+- type: entity
+  abstract: true
+  parent: BashableGinormousShield
+  id: BashableRiotShield
+  components:
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 3 #Plastic and less harmful
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 3
+    attackRate: 0.6 #Very slow
+    angle: 0
+    soundHit:
+      collection: Punch
+    wideAnimationRotation: -135
+  - type: MeleeThrowOnHit
+    speed: 5
+    distance: 2

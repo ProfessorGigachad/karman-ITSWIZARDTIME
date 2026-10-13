@@ -103,7 +103,7 @@
 
 - type: entity
   name: riot shield
-  parent: [ BaseRepairableShield, BaseGinormousShield, BaseShieldDestructible, BaseSecurityContraband ]
+  parent: [ BaseRepairableShield, BashableRiotShield, BaseShieldDestructible, BaseSecurityContraband ] #Karman BashableRiotShield
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
@@ -119,7 +119,7 @@
 
 - type: entity
   name: laser shield
-  parent: [ BaseRepairableShield, BaseGinormousShield, BaseShieldDestructible, BaseSecurityContraband ]
+  parent: [ BaseRepairableShield, BashableRiotShield, BaseShieldDestructible, BaseSecurityContraband ] #Karman BashableRiotShield
   id: RiotLaserShield
   description: A shield built for withstanding lasers, but not much else.
   components:
@@ -137,7 +137,7 @@
 
 - type: entity
   name: ballistic shield
-  parent: [ BaseRepairableShield, BaseGinormousShield, BaseShieldDestructible, BaseSecurityContraband ]
+  parent: [ BaseRepairableShield, BashableRiotShield, BaseShieldDestructible, BaseSecurityContraband ] #Karman BashableRiotShield
   id: RiotBulletShield
   description: A shield built for protecting against ballistics, but not much else.
   components:
@@ -157,7 +157,7 @@
 
 - type: entity
   name: wooden buckler
-  parent: BaseRoundShield
+  parent: BashableRoundShield #Karman
   id: WoodenBuckler
   description: A small round wooden makeshift shield.
   components:
@@ -198,7 +198,7 @@
 
 - type: entity
   name: cardboard shield
-  parent: BaseLargeShield
+  parent: BashableLargeShield #Karman
   id: CardShield
   description: A shield made of cardboard. Won't protect you from much.
   components:
@@ -236,7 +236,7 @@
 
 - type: entity
   name: makeshift shield
-  parent: [ BaseRepairableShield, BaseGinormousShield ]
+  parent: [ BaseRepairableShield, BashableGinormousShield ] #Karman BashableGinormousShield
   id: MakeshiftShield
   description: A rundown looking shield, not good for much.
   components:
@@ -266,7 +266,7 @@
 
 - type: entity
   name: web shield
-  parent: BaseLargeShield
+  parent: BashableLargeShield #Karman
   id: WebShield
   description: A stringy shield. It's weak, and doesn't seem to do well against heat.
   components:
@@ -306,7 +306,7 @@
 
 - type: entity
   name: clockwork shield
-  parent: [ BaseRepairableShield, BaseRoundShield, BaseShieldDestructible ]
+  parent: [ BaseRepairableShield, BashableRoundShield, BaseShieldDestructible ] #Karman BashableRoundShield
   id: ClockworkShield
   description: Ratvar oyrffrf lbh jvgu uvf cebgrpgvba.
   components:
@@ -318,7 +318,7 @@
 
 - type: entity
   name: mirror shield
-  parent: [ BaseLargeShield, BaseMagicalContraband ]
+  parent: [ BashableLargeShield, BaseMagicalContraband ] #Karman BashableLargeShield
   id: MirrorShield
   description: Eerily glows red... you hear the geometer whispering
   components:
@@ -360,7 +360,7 @@
 
 - type: entity
   name: energy shield
-  parent: [BaseShield, BaseSyndicateContraband]
+  parent: [BashableEnergyShield, BaseSyndicateContraband] #Karman BashableEnergyShield
   id: EnergyShield
   description: Exotic energy shield, when folded, can even fit in your pocket.
   components:
@@ -461,7 +461,7 @@
 
 - type: entity
   name: telescopic shield
-  parent: [ BaseRepairableShield, BaseShield, BaseShieldDestructible ]
+  parent: [ BaseRepairableShield, BashableRiotShield, BaseShieldDestructible ] #Karman BashableRiotShield
   id: TelescopicShield
   description: An advanced riot shield made of lightweight materials that collapses for easy storage.
   components:
