@@ -366,9 +366,9 @@
       collection: Punch
     wideAnimationRotation: -135
   - type: StaminaDamageOnCollide
-    damage: 10
+    damage: 6
   - type: StaminaDamageOnHit
-    damage: 10
+    damage: 6
   - type: Sprite
     sprite: Objects/Weapons/Melee/shields.rsi
     state: riot-icon
@@ -465,3 +465,7 @@
   - type: MeleeThrowOnHit
     speed: 5
     distance: 2
+  - type: StaminaDamageOnCollide
+    damage: 8
+  - type: StaminaDamageOnHit
+    damage: 8
